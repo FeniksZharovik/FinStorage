@@ -1,68 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Laporan Pegawai</title>
     <style>
         body {
-            font-family: 'Helvetica', sans-serif;
-            margin: 40px;
+            font-family: sans-serif;
+            font-size: 12px;
+            margin: 30px;
             color: #333;
         }
-
         h2 {
             text-align: center;
             margin-bottom: 5px;
+            font-size: 20px;
+            color: #2c3e50;
         }
-
-        .subtext {
+        .tanggal {
             text-align: center;
+            margin-bottom: 20px;
             font-size: 14px;
-            color: #666;
-            margin-bottom: 30px;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 14px;
+            margin-top: 10px;
         }
-
         th {
-            background-color: #4A90E2;
+            background-color: #3498db;
             color: white;
-            padding: 10px;
+            font-weight: bold;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #999;
             text-align: left;
         }
-
-        td {
-            padding: 8px 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
         tr:nth-child(even) {
-            background-color: #f9f9f9;
+            background-color: #f2f2f2;
         }
-
-        .footer {
-            text-align: right;
-            font-size: 12px;
-            color: #aaa;
+        footer {
+            text-align: center;
+            font-size: 10px;
             margin-top: 40px;
+            color: #888;
         }
     </style>
 </head>
 <body>
 
     <h2>{{ $title }}</h2>
-    <div class="subtext">Dicetak pada: {{ $tanggal }}</div>
+    <div class="tanggal">Tanggal Cetak: {{ $tanggal }}</div>
 
     <table>
         <thead>
             <tr>
-                <th style="width: 5%;">No</th>
-                <th style="width: 45%;">Nama Pegawai</th>
-                <th style="width: 50%;">Jabatan</th>
+                <th>No</th>
+                <th>Nama Pegawai</th>
+                <th>Jabatan</th>
             </tr>
         </thead>
         <tbody>
@@ -76,9 +71,9 @@
         </tbody>
     </table>
 
-    <div class="footer">
-        &copy; {{ date('Y') }} Laporan Pegawai - Aplikasi Internal
-    </div>
+    <footer>
+        &copy; {{ date('Y') }} Sistem Informasi Pegawai - Laporan Otomatis
+    </footer>
 
 </body>
 </html>

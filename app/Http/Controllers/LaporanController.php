@@ -10,11 +10,19 @@ class LaporanController extends Controller
     public function generatePDF()
     {
         $data = [
-            'title' => 'Laporan Pegawai',
+            'title' => 'Laporan Data Pegawai',
             'tanggal' => date('d-m-Y'),
             'pegawai' => [
-                ['nama' => 'Andi', 'jabatan' => 'Manager'],
-                ['nama' => 'Budi', 'jabatan' => 'Staff'],
+                ['nama' => 'Andi Saputra', 'jabatan' => 'Manager'],
+                ['nama' => 'Budi Santoso', 'jabatan' => 'Staff'],
+                ['nama' => 'Citra Ayu', 'jabatan' => 'HRD'],
+                ['nama' => 'Dedi Kurniawan', 'jabatan' => 'Marketing'],
+                ['nama' => 'Eka Rahayu', 'jabatan' => 'Keuangan'],
+                ['nama' => 'Fahri Ramadhan', 'jabatan' => 'IT Support'],
+                ['nama' => 'Gina Pratiwi', 'jabatan' => 'Supervisor'],
+                ['nama' => 'Hana Rizky', 'jabatan' => 'Customer Service'],
+                ['nama' => 'Irwan Hidayat', 'jabatan' => 'Admin'],
+                ['nama' => 'Joko Tambunan', 'jabatan' => 'Direktur'],
             ]
         ];
 
