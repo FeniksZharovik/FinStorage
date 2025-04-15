@@ -14,9 +14,7 @@ use App\Http\Controllers\FileController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FileController::class, 'index'])->name('home');
 
 Route::get('/upload', [FileController::class, 'showForm'])->name('file.form');
 Route::post('/upload', [FileController::class, 'upload'])->name('file.upload');
